@@ -10,6 +10,8 @@ public class DefenderScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("updateTarget", 0f, 0.5f);
+		InvokeRepeating("attackTarget", 0f, 1f);
+
 	}
 	
 	// Update is called once per frame
@@ -59,6 +61,17 @@ public class DefenderScript : MonoBehaviour {
 		}
 
 	}
+
+	void attackTarget()
+	{
+		if(target != null)
+		{
+			int chance = Random.Range(0, 2);
+			if(chance == 1)
+				Destroy(target);
+		}
+	}
+
 
 	private void OnDrawGizmos() {
 		Gizmos.color = Color.red;
