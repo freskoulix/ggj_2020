@@ -644,7 +644,7 @@ MonoBehaviour:
     enemy: {fileID: 1033358331}
     count: 2
   nextWave: 0
-  timeBetweenWaves: 60
+  timeBetweenWaves: 30
   waveCountdown: 0
   state: 2
   spawnPoints: {fileID: 1495009233}
