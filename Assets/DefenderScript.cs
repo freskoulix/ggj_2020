@@ -19,8 +19,9 @@ public class DefenderScript : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (target == null)
+    if (target == null) {
       return;
+    }
 
     Vector3 dir = target.transform.position - transform.position;
     Quaternion lookRotation = Quaternion.LookRotation(dir);
@@ -43,17 +44,18 @@ public class DefenderScript : MonoBehaviour
       }
     }
 
-
-    if (nearestEnemy == null)
+    if (nearestEnemy == null) {
       target = null;
+    }
     else if (shortestDistance > range)
     {
       target = null;
     }
     else
     {
-      if (target == null)
+      if (target == null) {
         target = nearestEnemy;
+      }
       else
       {
         var distanceToTarget = Vector3.Distance(transform.position, target.transform.position);

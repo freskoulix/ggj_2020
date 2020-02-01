@@ -6,7 +6,7 @@ public class AttackerEngine : MonoBehaviour
   public static float startHealth = 100;
   public float health = startHealth;
   public bool isDead = false;
-  private float attackDistance = 25;
+  private float attackDistance = 35;
   private Transform goalAttackPoint;
   private Animator animator;
 
