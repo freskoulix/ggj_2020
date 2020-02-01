@@ -29,6 +29,7 @@ public class AttackerEngine : MonoBehaviour {
     agent.destination = goal.position;
     agent.speed = Random.Range(15, 35);
     agent.acceleration = Random.Range(2, 10);
+    GetComponent<Animator>().SetTrigger("move_trigger");
   }
 
   // Update is called once per frame
