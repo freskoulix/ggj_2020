@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Main Menu.unity
+    guid: c6a1e00ca2822944cad4a6780a74eb59
+  - enabled: 1
     path: Assets/Main Scene.unity
     guid: 98d5df467d5b0294abd140709712eea3
-  - enabled: 1
-    path: Assets/Skata.unity
-    guid: 9c0a4aeb6abd2da4882861e4bfa1fa30
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
