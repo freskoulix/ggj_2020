@@ -43,7 +43,6 @@ public class WaveSpawner : MonoBehaviour {
 		state = SpawnState.SPAWNING;
 		foreach(Transform spawnPoint in spawnPoints)
 		{
-			// Debug.Log("Wave countdown: " + _wave.count);
 			SpawnEnemy(spawnPoint, _wave.enemy);
 		}
 
@@ -78,5 +77,4 @@ public class Wave
 {
 	public string name;
 	public Transform enemy;
-	public int count;
 }
