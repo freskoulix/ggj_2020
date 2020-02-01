@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: afb8e93f30bfbda408b0074367ecdc59, type: 2}
 --- !u!1001 &872411959
 Prefab:
   m_ObjectHideFlags: 0
@@ -163,6 +163,10 @@ Prefab:
     - target: {fileID: 450026, guid: 90b23498c82f0de429849deccf28edf0, type: 2}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 183850, guid: 90b23498c82f0de429849deccf28edf0, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90b23498c82f0de429849deccf28edf0, type: 2}
@@ -351,6 +355,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 199140, guid: b75d5ea986d785c4ea6139debe862089, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459684, guid: b75d5ea986d785c4ea6139debe862089, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b75d5ea986d785c4ea6139debe862089, type: 2}
   m_IsPrefabParent: 0
@@ -498,7 +510,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1929931481}
   m_LocalRotation: {x: 0.5709996, y: -0, z: -0, w: 0.8209503}
-  m_LocalPosition: {x: 0, y: 136, z: -51}
+  m_LocalPosition: {x: 0, y: 150, z: -51}
   m_LocalScale: {x: 1.182, y: 1.1917062, z: 0.03122244}
   m_Children: []
   m_Father: {fileID: 0}
@@ -517,7 +529,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2012941940
 Transform:

@@ -17,16 +17,16 @@ public class WaveSpawner : MonoBehaviour {
 		state = SpawnState.COUNTING;
 		waveCountdown = timeBetweenWaves;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
 		if (nextWave == -1)
 			return;
-		
+
 		if(waveCountdown <= 0 && state != SpawnState.SPAWNING)
 		{
-			// Start spawning 
+			// Start spawning
 			Debug.Log("Spawning new wave");
 			StartCoroutine(SpawnWave(waves[nextWave]));
 			StartNextWave();
@@ -60,7 +60,7 @@ public class WaveSpawner : MonoBehaviour {
 		}
 		state = SpawnState.COUNTING;
 		waveCountdown= timeBetweenWaves;
-		
+
 	}
 
 	void SpawnEnemy(Transform _spawnPoint, Transform _enemy)
