@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DefenderScript : MonoBehaviour
 {
-
   public float attack = 100;
   public float range = 40f;
   public float turnSpeed = 15f;

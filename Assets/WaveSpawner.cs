@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-
   public enum SpawnState { SPAWNING, COUNTING }
   public Wave[] waves;
   public int nextWave;
