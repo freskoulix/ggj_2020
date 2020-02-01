@@ -940,6 +940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46292936352cf4542942daff75a64b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  isDead: 0
 --- !u!137 &137000013639793836
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1020,7 +1022,7 @@ NavMeshAgent:
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 30
+  m_StoppingDistance: 20
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
