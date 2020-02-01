@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class DefenderScript : MonoBehaviour {
 
+    public float attack = 100;
 	public float range = 40f;
 	public float turnSpeed = 15f;
-	public GameObject target = null;
+    public GameObject target = null;
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("updateTarget", 0f, 0.5f);
 		InvokeRepeating("attackTarget", 0f, 1f);
-
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -34,7 +34,7 @@ public class DefenderScript : MonoBehaviour {
 		foreach(GameObject enemy in enemies)
 		{
 			float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-			if(distanceToEnemy < shortestDistance)
+			if(distanceToEnemy < shortestDistance && !enemy.GetComponent<AttackerEngine>().isDead)
 			{
 				shortestDistance = distanceToEnemy;
 				nearestEnemy = enemy;
@@ -62,16 +62,17 @@ public class DefenderScript : MonoBehaviour {
 
 	}
 
-	void attackTarget()
+	public void attackTarget()
 	{
-		if(target != null)
+		if(target != null && !target.GetComponent<AttackerEngine>().isDead)
 		{
-			int chance = Random.Range(0, 2);
+            /*int chance = Random.Range(0, 2);
 			if(chance == 1)
 				Destroy(target);
+                */
+            target.GetComponent<AttackerEngine>().TakeDamage(attack);
 		}
 	}
-
 
 	private void OnDrawGizmos() {
 		Gizmos.color = Color.red;

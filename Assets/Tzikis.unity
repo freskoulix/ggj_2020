@@ -112,7 +112,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: c55a4d9b9db772847bbaff80cef57ec2, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: f548f50499cfed547a2669bd9dcf0908, type: 2}
 --- !u!1 &24256866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,6 +1463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 100
   range: 40
   turnSpeed: 15
   target: {fileID: 0}
@@ -2228,6 +2229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 100
   range: 40
   turnSpeed: 15
   target: {fileID: 0}
@@ -2445,6 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 100
   range: 40
   turnSpeed: 15
   target: {fileID: 0}
@@ -2587,6 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 100
   range: 40
   turnSpeed: 15
   target: {fileID: 0}
