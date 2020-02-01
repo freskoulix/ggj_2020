@@ -10,6 +10,8 @@ public class WaveSpawner : MonoBehaviour {
 	public float timeBetweenWaves = 5f;
 	public float waveCountdown;
 	public SpawnState state = SpawnState.COUNTING;
+
+	public Transform spawnPoints;
 	// Use this for initialization
 	void Start () {
 		state = SpawnState.COUNTING;
@@ -39,10 +41,10 @@ public class WaveSpawner : MonoBehaviour {
 	{
 		Debug.Log("Spawning Wave: " + _wave.name);
 		state = SpawnState.SPAWNING;
-		for(int i=0; i < _wave.count; i++)
+		foreach(Transform spawnPoint in spawnPoints)
 		{
-			Debug.Log("Wave countdown: " + _wave.count);
-			SpawnEnemy(_wave.enemy);
+			// Debug.Log("Wave countdown: " + _wave.count);
+			SpawnEnemy(spawnPoint, _wave.enemy);
 		}
 
 		yield break;
@@ -62,10 +64,12 @@ public class WaveSpawner : MonoBehaviour {
 		
 	}
 
-	void SpawnEnemy(Transform _enemy)
+	void SpawnEnemy(Transform _spawnPoint, Transform _enemy)
 	{
+		Debug.Log("Spawning Enemies");
+		Debug.Log("Spawning at SP: " + _spawnPoint.name);
 		Debug.Log("Spawning Enemy: " + _enemy.name);
-		Instantiate(_enemy, transform.position, transform.rotation);
+		Instantiate(_enemy, _spawnPoint.position, _spawnPoint.rotation);
 	}
 }
 
