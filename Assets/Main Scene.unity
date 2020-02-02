@@ -3603,43 +3603,43 @@ MonoBehaviour:
   sounds:
   - name: start of round
     clip: {fileID: 8300000, guid: c75afaddbcdb7134b907805b7e52062c, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: game over
     clip: {fileID: 8300000, guid: 03f89a5ad994a4b40b052268a3901357, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: intermission
     clip: {fileID: 8300000, guid: 55da12fa91861534a8d6badd50fc655b, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: main menu
     clip: {fileID: 8300000, guid: 037edc84bac34bf498662f7c68dbcec5, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: gunfire
-    clip: {fileID: 8300000, guid: aaecbd49794f6f0489459c254ab55754, type: 3}
-    volume: 0.8
+    clip: {fileID: 8300000, guid: f1c6fa61ed6183d4b8332fdd02163b62, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: running
-    clip: {fileID: 8300000, guid: 9e07e3bbc7bfdb0439af35ac3100cfd7, type: 3}
-    volume: 0.8
+    clip: {fileID: 8300000, guid: be672f74dae971d46883db950d52243a, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: repair
-    clip: {fileID: 8300000, guid: 21b16a45aa98ad94ca3743fcf94befe7, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 183ecf5f2aea014439ec57b0d213a245, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
