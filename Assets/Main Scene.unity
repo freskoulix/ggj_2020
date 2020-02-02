@@ -1010,6 +1010,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1102.4667
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6a78c355881341c78b1c08cb7406c81, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
   m_IsPrefabParent: 0
@@ -4878,6 +4882,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 100.00006
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6a78c355881341c78b1c08cb7406c81, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
   m_IsPrefabParent: 0
@@ -5642,6 +5650,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6a78c355881341c78b1c08cb7406c81, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
   m_IsPrefabParent: 0
@@ -5999,6 +6011,10 @@ Prefab:
       propertyPath: m_Name
       value: toixos (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6a78c355881341c78b1c08cb7406c81, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fcfc1558267a436e826f932bd80767b, type: 3}
   m_IsPrefabParent: 0
