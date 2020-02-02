@@ -13,7 +13,6 @@ public class DefenderScript : MonoBehaviour
 
   [Header("Attack Variables")]
   public float fireRate = 1f;
-  private float fireCountdown = 0f;
   public GameObject bulletPrefab;
   public Transform firePoint;
 
