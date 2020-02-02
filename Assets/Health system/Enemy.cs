@@ -7,10 +7,10 @@ public class Enemy : MonoBehaviour {
     public Transform target;
 
     void Start (){
-        target = Wall.point;
-        if(distance <= 0.5){
-            Attack(target);
-        }
+        // target = Wall.point;
+        // if(distance <= 0.5){
+        //     Attack(target);
+        // }
 	}
 
 	void Update () {

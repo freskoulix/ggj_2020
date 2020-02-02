@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class AttackerEngine : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class AttackerEngine : MonoBehaviour
   public Transform goalAttackPoint;
   private Animator animator;
   private NavMeshAgent agent;
+
+  private Transform parent;
+  private Transform healthBarCanvas;
+  private Image healthBar;
+	Vector3 canvasModelPositionDiff;
 
   Transform GetNearestAttackPoint()
   {
@@ -31,12 +37,22 @@ public class AttackerEngine : MonoBehaviour
       }
     }
 
-    return nearestAttackPoint.GetChild(0);
+    return nearestAttackPoint;
   }
 
   // Use this for initialization
   void Start()
   {
+
+    // health = startHealth;
+    parent = transform.parent;
+    healthBarCanvas = parent.transform.GetChild(0);
+
+    healthBar = healthBarCanvas.GetChild(0).GetChild(0).GetComponent<Image>();
+    healthBar.fillAmount = health / startHealth;
+		canvasModelPositionDiff = healthBarCanvas.position - transform.position;
+
+
     goalAttackPoint = GetNearestAttackPoint();
     agent = GetComponent<NavMeshAgent>();
     agent.destination = goalAttackPoint.position;
@@ -50,6 +66,16 @@ public class AttackerEngine : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    if(healthBarCanvas != null)
+    {
+      healthBarCanvas.position = transform.position + canvasModelPositionDiff;
+      healthBar.fillAmount = health / startHealth;
+      if(health <= 0){
+          Destroy(healthBarCanvas.gameObject);
+          //Also destroy tower/wall if it's a different entity
+      }
+    }
+
     if(goalAttackPoint == null)
       return;
 
@@ -83,6 +109,8 @@ public class AttackerEngine : MonoBehaviour
     {
         if(goalAttackPoint == null)
             return;
+        if(isDead == true)
+          return;
 
         float dist = Vector3.Distance(goalAttackPoint.transform.position, transform.position);
 
@@ -98,7 +126,7 @@ public class AttackerEngine : MonoBehaviour
         if(goalAttackPoint == null)
             return;
 
-      goalAttackPoint.GetComponent<Wall>().TakeDamage(100F);
+      goalAttackPoint.GetChild(0).GetComponent<Wall>().TakeDamage(100F);
     }
 
   public void deleteMe()
