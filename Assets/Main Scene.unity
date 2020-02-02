@@ -2796,15 +2796,15 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: running
-    clip: {fileID: 8300000, guid: b587dcade4787cf4e94008d1545a908e, type: 3}
-    volume: 0.24
+    clip: {fileID: 8300000, guid: 9e07e3bbc7bfdb0439af35ac3100cfd7, type: 3}
+    volume: 0.8
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: repair
+    clip: {fileID: 8300000, guid: 21b16a45aa98ad94ca3743fcf94befe7, type: 3}
+    volume: 0.3
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: 
