@@ -2297,21 +2297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e979994af55814486af214faef3632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - name: First
-    enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
-  - name: second
-    enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
-  - name: third
-    enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
-  - name: third
-    enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
-  - name: third
-    enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
   nextWave: 0
   timeBetweenWaves: 30
   waveCountdown: 0
-  state: 2
+  enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
+  state: 1
   spawnPoints: {fileID: 1495009233}
 --- !u!4 &685436414
 Transform:

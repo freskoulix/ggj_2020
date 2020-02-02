@@ -5,10 +5,11 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
   public enum SpawnState { SPAWNING, COUNTING }
-  public Wave[] waves;
   public int nextWave;
   public float timeBetweenWaves = 5f;
   public float waveCountdown;
+  public Transform enemy;
+
   public SpawnState state = SpawnState.COUNTING;
 
   public Transform spawnPoints;
@@ -23,14 +24,11 @@ public class WaveSpawner : MonoBehaviour
   void Update()
   {
 
-    if (nextWave == -1)
-      return;
-
     if (waveCountdown <= 0 && state != SpawnState.SPAWNING)
     {
       // Start spawning
       // Debug.Log("Spawning new wave");
-      StartCoroutine(SpawnWave(waves[nextWave]));
+      StartCoroutine(SpawnWave(enemy));
       StartNextWave();
     }
     else
@@ -39,13 +37,12 @@ public class WaveSpawner : MonoBehaviour
     }
   }
 
-  IEnumerator SpawnWave(Wave _wave)
+  IEnumerator SpawnWave(Transform enemy)
   {
-    // Debug.Log("Spawning Wave: " + _wave.name);
     state = SpawnState.SPAWNING;
     foreach (Transform spawnPoint in spawnPoints)
     {
-      SpawnEnemy(spawnPoint, _wave.enemy);
+      SpawnEnemy(spawnPoint, enemy);
     }
 
     yield break;
@@ -55,11 +52,6 @@ public class WaveSpawner : MonoBehaviour
   {
     Debug.Log("Starting new Wave");
     nextWave++;
-    if (nextWave > waves.Length - 1)
-    {
-      Debug.Log("Waves completed. Stopping");
-      nextWave = -1;
-    }
     state = SpawnState.COUNTING;
     waveCountdown = timeBetweenWaves;
 
@@ -74,9 +66,9 @@ public class WaveSpawner : MonoBehaviour
   }
 }
 
-[System.Serializable]
-public class Wave
-{
-  public string name;
-  public Transform enemy;
-}
+// [System.Serializable]
+// public class Wave
+// {
+//   public string name;
+//   public Transform enemy;
+// }
