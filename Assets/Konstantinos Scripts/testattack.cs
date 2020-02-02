@@ -7,11 +7,11 @@ public class testattack : MonoBehaviour {
     public Wall target;
     public float maxDist;
     public float dist;
-    Animator anim;
+    Animator animator;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         InvokeRepeating("dealDamage", 0f, 1f);
     }
 
@@ -19,7 +19,7 @@ public class testattack : MonoBehaviour {
     {
         if(health <= 0)
         {
-            GetComponent<Animator>().SetTrigger("death_trigger");
+            animator.SetTrigger("death_trigger");
         }
     }
 
@@ -28,7 +28,7 @@ public class testattack : MonoBehaviour {
         dist = Vector3.Distance(target.transform.position, transform.position);
         if (dist <= maxDist)
         {
-            GetComponent<Animator>().SetTrigger("attack_trigger");
+            animator.SetTrigger("attack_trigger");
             target.TakeDamage(100F);
         }
     }
