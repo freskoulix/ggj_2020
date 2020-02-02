@@ -6,7 +6,7 @@ public class Wall : MonoBehaviour {
     public float startHealth = 1000F;
     public float health;
     public static Transform point;
-    public Image healthBar;
+    private Image healthBar;
 
     private void Awake()
     {
@@ -20,6 +20,7 @@ public class Wall : MonoBehaviour {
 
     void Start () {
         health = startHealth;
+        healthBar = transform.GetChild(0).GetChild(0).GetComponent<Image>();
         healthBar.fillAmount = health / startHealth;
     }
 
