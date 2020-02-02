@@ -12,7 +12,7 @@ public class testattack : MonoBehaviour {
     void Start()
     {
         animator = GetComponent<Animator>();
-        InvokeRepeating("dealDamage", 0f, 1f);
+        InvokeRepeating("dealDamage", 0f, 1.5f);
     }
 
     private void Update()
@@ -28,13 +28,18 @@ public class testattack : MonoBehaviour {
     {
         if(target == null)
             return;
+
         dist = Vector3.Distance(target.transform.position, transform.position);
 
         if (dist <= maxDist)
         {
             animator.SetTrigger("attack_trigger");
-            target.TakeDamage(100F);
+            Invoke("damageTarget", 0.6f);
         }
     }
 
+    void damageTarget()
+    {
+        target.TakeDamage(100F);
+    }
 }
