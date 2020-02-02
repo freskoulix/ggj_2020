@@ -65,7 +65,8 @@ public class WaveSpawner : MonoBehaviour
     // Debug.Log("Spawning Enemies");
     // Debug.Log("Spawning at SP: " + _spawnPoint.name);
     // Debug.Log("Spawning Enemy: " + _enemy.name);
-    Instantiate(_enemy, _spawnPoint.position, _spawnPoint.rotation);
+    var enemy = Instantiate(_enemy, _spawnPoint.position, _spawnPoint.rotation);
+    enemy.GetChild(1).GetComponent<AttackerEngine>().damage += (5*(nextWave-1));
   }
 }
 
