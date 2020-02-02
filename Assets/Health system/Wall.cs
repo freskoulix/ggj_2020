@@ -24,6 +24,8 @@ public class Wall : MonoBehaviour {
 
     void Start () {
         health = startHealth;
+        health = Random.Range(1.0f,startHealth);
+
         healthBar = transform.GetChild(0).GetChild(0).GetComponent<Image>();
         healthBar.fillAmount = health / startHealth;
 

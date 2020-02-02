@@ -4,7 +4,7 @@ public class RepairEngine : MonoBehaviour
 {
   public Texture2D idleTexture;
   public Texture2D repairTexture;
-  private float repairUnit = 100f;
+  private float repairUnit = 40f;
   private Wall wall;
   private Color originalColor;
   private MeshRenderer meshRenderer;

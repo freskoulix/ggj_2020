@@ -26,7 +26,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1118025373844908
 GameObject:
@@ -43,7 +43,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1203119299481970
 GameObject:
@@ -58,7 +58,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1414646323624474
 GameObject:
@@ -71,12 +71,14 @@ GameObject:
   - component: {fileID: 33390309308234816}
   - component: {fileID: 23175704137534900}
   - component: {fileID: 114938330282641340}
+  - component: {fileID: 65327626847203526}
+  - component: {fileID: 114921984682937506}
   m_Layer: 0
   m_Name: tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1716358115532826
 GameObject:
@@ -95,7 +97,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4220020716700834
 Transform:
@@ -103,13 +105,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414646323624474}
-  m_LocalRotation: {x: -0, y: 0.9370317, z: -0, w: 0.34924433}
-  m_LocalPosition: {x: -2.8, y: 0, z: 3.2}
+  m_LocalRotation: {x: -0, y: 0.41708052, z: -0, w: -0.90886956}
+  m_LocalPosition: {x: 4.6, y: 0, z: -3}
   m_LocalScale: {x: 233.85478, y: 233.85384, z: 59.059265}
   m_Children: []
   m_Father: {fileID: 4758617627400064}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 139.11801, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 310.699, z: 0}
 --- !u!4 &4758617627400064
 Transform:
   m_ObjectHideFlags: 1
@@ -117,7 +119,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1203119299481970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.1, y: -19.524025, z: -78.4}
+  m_LocalPosition: {x: 10.9, y: -19.524025, z: -33.4}
   m_LocalScale: {x: 0.7481846, y: 0.7481846, z: 0.7481846}
   m_Children:
   - {fileID: 224118985315092056}
@@ -146,14 +148,14 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
+  m_ScaleInLightmap: 0.5
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: 0.3
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -166,6 +168,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414646323624474}
   m_Mesh: {fileID: 4300000, guid: dfbb6a07c177a4bd7be4d731ebe3e057, type: 3}
+--- !u!65 &65327626847203526
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414646323624474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0846753, y: 0.2208469, z: 0.21766165}
+  m_Center: {x: 0.011043611, y: 0.10655435, z: 0.085654296}
 --- !u!114 &114087448675747142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,6 +284,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114921984682937506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414646323624474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60d219c83aa4bc34296d88894756c3ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleTexture: {fileID: 2800000, guid: a7367178938f02c42a1574c9ced9d3da, type: 3}
+  repairTexture: {fileID: 2800000, guid: 38045a10ed8524a4294bb21bdad4bc69, type: 3}
 --- !u!114 &114938330282641340
 MonoBehaviour:
   m_ObjectHideFlags: 1

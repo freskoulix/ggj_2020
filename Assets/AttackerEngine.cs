@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class AttackerEngine : MonoBehaviour
 {
   public static float startHealth = 100;
+  public float damage = 100f;
   public float health = startHealth;
   public bool isDead = false;
   public float attackDistance = 15;
@@ -126,7 +127,7 @@ public class AttackerEngine : MonoBehaviour
         if(goalAttackPoint == null)
             return;
 
-      goalAttackPoint.GetChild(0).GetComponent<Wall>().TakeDamage(100F);
+      goalAttackPoint.GetChild(0).GetComponent<Wall>().TakeDamage(damage);
     }
 
   public void deleteMe()
