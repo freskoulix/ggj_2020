@@ -26,7 +26,10 @@ public class testattack : MonoBehaviour {
 
     void dealDamage()
     {
+        if(target == null)
+            return;
         dist = Vector3.Distance(target.transform.position, transform.position);
+
         if (dist <= maxDist)
         {
             animator.SetTrigger("attack_trigger");
