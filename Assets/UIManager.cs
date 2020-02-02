@@ -22,8 +22,8 @@ public class UIManager : MonoBehaviour {
 	void updateWavesUI ()
 	{
 		float currentWave = waveSpawner.nextWave;
-		currentWaveTextComponent.text = "Current Wave: " + (currentWave);
-		countDownTextComponent.text = "Countdown: " + (int) waveSpawner.waveCountdown;
+		currentWaveTextComponent.text = "Wave\n" + (currentWave);
+		countDownTextComponent.text = "Timer\n" + (int) waveSpawner.waveCountdown;
 	    var attackPoints = GameObject.Find("/AttackPoints").transform;
 		var iLen = attackPoints.childCount;
 		if(iLen < 8)
