@@ -447,15 +447,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.23674406, z: -0, w: 0.97157204}
+  m_LocalPosition: {x: -86.9, y: 5.200001, z: 19.5}
+  m_LocalScale: {x: 6.9767, y: 6.9767, z: 6.9767}
   m_Children:
   - {fileID: 427330}
   - {fileID: 477882}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -27.389002, z: 0}
 --- !u!4 &403756
 Transform:
   m_ObjectHideFlags: 1
@@ -466,7 +466,8 @@ Transform:
     w: 1}
   m_LocalPosition: {x: 0.00000038757324, y: -0.00000009689331, z: 0.00000009689331}
   m_LocalScale: {x: 0.99999976, y: 0.99999946, z: 0.99999994}
-  m_Children: []
+  m_Children:
+  - {fileID: 4887906124849576}
   m_Father: {fileID: 428812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -974,6 +975,34 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132888}
   m_IsPrefabParent: 1
+--- !u!1 &1392543428706752
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4887906124849576}
+  m_Layer: 0
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4887906124849576
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392543428706752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.132, y: -0, z: 0.905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403756}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114425416900003888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -985,7 +1014,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 100
+  attack: 20
   range: 60
   turnSpeed: 15
   target: {fileID: 0}
+  fireRate: 1
+  bulletPrefab: {fileID: 1006641193656916, guid: af2482d0b7d214d32b2033615f509fe7,
+    type: 2}
+  firePoint: {fileID: 4887906124849576}
+  shotEffect: {fileID: 1101763988999086, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}

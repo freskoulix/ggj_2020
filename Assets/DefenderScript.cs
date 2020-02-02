@@ -10,12 +10,21 @@ public class DefenderScript : MonoBehaviour
   public GameObject target = null;
 
   private Animator animator;
+
+  [Header("Attack Variables")]
+  public float fireRate = 1f;
+  private float fireCountdown = 0f;
+  public GameObject bulletPrefab;
+  public Transform firePoint;
+
+	public GameObject shotEffect;
+
   // Use this for initialization
   void Start()
   {
     animator = GetComponent<Animator>();
     InvokeRepeating("updateTarget", 0f, 0.5f);
-    InvokeRepeating("attackTarget", 0f, 1f);
+    InvokeRepeating("shootTarget", 0f, 1f/fireRate);
   }
 
   // Update is called once per frame
@@ -29,6 +38,30 @@ public class DefenderScript : MonoBehaviour
     Quaternion lookRotation = Quaternion.LookRotation(dir);
     Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
     transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+  }
+
+  void shootTarget()
+  {
+    if (target == null)
+    {
+      return;
+    }
+    if(target.GetComponent<AttackerEngine>().isDead)
+    {
+      clearTarget();
+      return;
+    }
+
+		GameObject effectInst = Instantiate(shotEffect, firePoint.position, firePoint.rotation);
+		Destroy(effectInst, 2f);
+
+    GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    Bullet bullet = bulletGO.GetComponent<Bullet>();
+    if(bullet != null)
+    {
+      bullet.Seek(target.transform, attack);
+    }
   }
 
   void updateTarget()
@@ -65,22 +98,6 @@ public class DefenderScript : MonoBehaviour
           setTarget(nearestEnemy);
       }
     }
-
-  }
-
-  public void attackTarget()
-  {
-    if (target == null)
-    {
-      return;
-    }
-    if(target.GetComponent<AttackerEngine>().isDead)
-    {
-      clearTarget();
-      return;
-    }
-
-    target.GetComponent<AttackerEngine>().TakeDamage(attack);
 
   }
 
