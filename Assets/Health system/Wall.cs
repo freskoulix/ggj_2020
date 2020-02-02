@@ -10,7 +10,16 @@ public class Wall : MonoBehaviour {
     Renderer rend;
     public void TakeDamage(float damage)
     {
-        health = health - damage;
+        health -= damage;
+    }
+
+    public void RepairDamage(float repair)
+    {
+        if (health >= startHealth) {
+            return;
+        }
+
+        health += repair;
     }
 
     void Start () {
