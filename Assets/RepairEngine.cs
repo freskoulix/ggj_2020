@@ -50,6 +50,7 @@ public class RepairEngine : MonoBehaviour
     if (isCursorOverWall)
     {
       setCursor(repairTexture);
+      FindObjectOfType<AudioManager>().Play("repair");
       wall.RepairDamage(repairUnit);
     }
   }
