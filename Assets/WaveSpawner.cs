@@ -29,7 +29,7 @@ public class WaveSpawner : MonoBehaviour
     if (waveCountdown <= 0 && state != SpawnState.SPAWNING)
     {
       // Start spawning
-      Debug.Log("Spawning new wave");
+      // Debug.Log("Spawning new wave");
       StartCoroutine(SpawnWave(waves[nextWave]));
       StartNextWave();
     }
@@ -41,7 +41,7 @@ public class WaveSpawner : MonoBehaviour
 
   IEnumerator SpawnWave(Wave _wave)
   {
-    Debug.Log("Spawning Wave: " + _wave.name);
+    // Debug.Log("Spawning Wave: " + _wave.name);
     state = SpawnState.SPAWNING;
     foreach (Transform spawnPoint in spawnPoints)
     {
@@ -67,9 +67,9 @@ public class WaveSpawner : MonoBehaviour
 
   void SpawnEnemy(Transform _spawnPoint, Transform _enemy)
   {
-    Debug.Log("Spawning Enemies");
-    Debug.Log("Spawning at SP: " + _spawnPoint.name);
-    Debug.Log("Spawning Enemy: " + _enemy.name);
+    // Debug.Log("Spawning Enemies");
+    // Debug.Log("Spawning at SP: " + _spawnPoint.name);
+    // Debug.Log("Spawning Enemy: " + _enemy.name);
     Instantiate(_enemy, _spawnPoint.position, _spawnPoint.rotation);
   }
 }

@@ -141,48 +141,6 @@ Transform:
   m_Father: {fileID: 1073230857}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &40066410
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -22.821499
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 29.639965
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 32.244812
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.32073712
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.4388878
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.20757437
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.8132762
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702997206847900, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9a631d2b120fa4aaf94be965e0d1faa2, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &164217326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,7 +1241,7 @@ MonoBehaviour:
   - name: third
     enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
   nextWave: 0
-  timeBetweenWaves: 30
+  timeBetweenWaves: 10
   waveCountdown: 0
   state: 2
   spawnPoints: {fileID: 1495009233}

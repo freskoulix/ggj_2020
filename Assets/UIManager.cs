@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour {
 	private Text countDownTextComponent;
 	private Text currentWaveTextComponent;
 	private Text maxWavesTextComponent;
+
+	private int wavesLength = 0;
 	// Use this for initialization
 	void Start () {
 		waveSpawner = FindObjectOfType<WaveSpawner>();
@@ -17,13 +19,22 @@ public class UIManager : MonoBehaviour {
 		currentWaveTextComponent = transform.GetChild(0).GetChild(1).GetComponent<Text>();
 		maxWavesTextComponent = transform.GetChild(0).GetChild(2).GetComponent<Text>();
 
-		maxWavesTextComponent.text = "Total Waves: " + (int) waveSpawner.waves.Length;
+		wavesLength = (int) waveSpawner.waves.Length;
+		maxWavesTextComponent.text = "Total Waves: " + wavesLength;
+		InvokeRepeating("updateWavesUI", 0f, 0.1f);
+
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+	void updateWavesUI ()
 	{
-				countDownTextComponent.text = "Countdown: " + (int) waveSpawner.waveCountdown;
-				currentWaveTextComponent.text = "Current Wave: " + (waveSpawner.nextWave + 1);
+		float currentWave = waveSpawner.nextWave;
+		if(currentWave == -1)
+			currentWave = wavesLength;
+		currentWaveTextComponent.text = "Current Wave: " + (currentWave);
+
+		if(currentWave == wavesLength)
+			countDownTextComponent.text = "Final Wave!";
+		else
+			countDownTextComponent.text = "Countdown: " + (int) waveSpawner.waveCountdown;
 	}
 }
