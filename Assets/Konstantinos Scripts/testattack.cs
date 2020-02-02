@@ -17,10 +17,11 @@ public class testattack : MonoBehaviour {
 
     private void Update()
     {
-        if(health <= 0)
-        {
-            animator.SetTrigger("death_trigger");
-        }
+        // These should now already be taken care of by the main Attacker Engine
+        // if(health <= 0)
+        // {
+        //     animator.SetTrigger("death_trigger");
+        // }
     }
 
     void dealDamage()
