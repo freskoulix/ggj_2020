@@ -37,10 +37,9 @@ public class AttackerEngine : MonoBehaviour
   // Use this for initialization
   void Start()
   {
-    var goal = GetNearestAttackPoint();
-    goalAttackPoint = goal;
+    goalAttackPoint = GetNearestAttackPoint();
     agent = GetComponent<NavMeshAgent>();
-    agent.destination = goal.position;
+    agent.destination = goalAttackPoint.position;
     agent.speed = Random.Range(15, 35);
     agent.acceleration = Random.Range(2, 10);
     animator = GetComponent<Animator>();
