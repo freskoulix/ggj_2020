@@ -30,9 +30,6 @@ public class WaveSpawner : MonoBehaviour
       // Debug.Log("Spawning new wave");
       StartCoroutine(SpawnWave(enemy));
       StartNextWave();
-            FindObjectOfType<AudioManager>().Stop("intermission");
-            FindObjectOfType<AudioManager>().Play("start of round");
-            FindObjectOfType<AudioManager>().Play("running");
     }
     else
     {

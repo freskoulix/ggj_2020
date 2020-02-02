@@ -60,8 +60,7 @@ public class DefenderScript : MonoBehaviour
     Bullet bullet = bulletGO.GetComponent<Bullet>();
     if(bullet != null)
     {
-            FindObjectOfType<AudioManager>().Play("gunfire");
-            bullet.Seek(target.transform, attack);
+      bullet.Seek(target.transform, attack);
     }
   }
 

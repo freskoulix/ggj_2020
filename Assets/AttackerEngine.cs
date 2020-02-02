@@ -64,7 +64,6 @@ public class AttackerEngine : MonoBehaviour
     }
     if (health <= 0 && !isDead)
     {
-      FindObjectOfType<AudioManager>().Play("Woozyyy_popping_bubble_1");
       animator.SetBool("attack_bool", false);
       animator.SetBool("move_bool", false);
       animator.SetBool("death_bool", true);
