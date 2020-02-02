@@ -1257,7 +1257,7 @@ MonoBehaviour:
   - name: third
     enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
   nextWave: 0
-  timeBetweenWaves: 5
+  timeBetweenWaves: 30
   waveCountdown: 0
   state: 2
   spawnPoints: {fileID: 1495009233}
@@ -1448,29 +1448,10 @@ Transform:
   m_Father: {fileID: 1073230857}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &741961565 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 132888, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
-  m_PrefabInternal: {fileID: 621916700}
 --- !u!4 &741961567 stripped
 Transform:
   m_PrefabParentObject: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
   m_PrefabInternal: {fileID: 621916700}
---- !u!114 &741961568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 741961565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 100
-  range: 40
-  turnSpeed: 15
-  target: {fileID: 0}
 --- !u!1 &743180427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2166,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
       propertyPath: m_LocalScale.x
@@ -2218,25 +2199,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
   m_PrefabInternal: {fileID: 1112975253}
---- !u!1 &1112975255 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 132888, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
-  m_PrefabInternal: {fileID: 1112975253}
---- !u!114 &1112975256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1112975255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 100
-  range: 40
-  turnSpeed: 15
-  target: {fileID: 0}
 --- !u!1 &1141361491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,7 +2365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
       propertyPath: m_LocalScale.x
@@ -2436,25 +2398,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
   m_PrefabInternal: {fileID: 1220920495}
---- !u!1 &1220920497 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 132888, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
-  m_PrefabInternal: {fileID: 1220920495}
---- !u!114 &1220920498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1220920497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 100
-  range: 40
-  turnSpeed: 15
-  target: {fileID: 0}
 --- !u!1001 &1246444876
 Prefab:
   m_ObjectHideFlags: 0
@@ -2464,7 +2407,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2472,7 +2415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 52.7
+      value: 13.7
       objectReference: {fileID: 0}
     - target: {fileID: 477772, guid: c119a327e0fdf4f4890b2d98da9e2914, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2546,7 +2489,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
       propertyPath: m_LocalScale.x
@@ -2579,25 +2522,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 403460, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
   m_PrefabInternal: {fileID: 1283196568}
---- !u!1 &1283196570 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 132888, guid: aa05473e4d04e834eb7a29b53251c8cf, type: 2}
-  m_PrefabInternal: {fileID: 1283196568}
---- !u!114 &1283196571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1283196570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: 100
-  range: 40
-  turnSpeed: 15
-  target: {fileID: 0}
 --- !u!1 &1302773826
 GameObject:
   m_ObjectHideFlags: 0

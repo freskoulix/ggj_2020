@@ -61,11 +61,17 @@ public class AttackerEngine : MonoBehaviour
       animator.SetBool("move_bool", false);
       animator.SetBool("death_bool", true);
       isDead = true;
+      Invoke("deleteMe", 4f);
     }
   }
 
   public void TakeDamage(float attack)
   {
     health -= attack;
+  }
+
+  public void deleteMe()
+  {
+    Destroy(this.gameObject);
   }
 }

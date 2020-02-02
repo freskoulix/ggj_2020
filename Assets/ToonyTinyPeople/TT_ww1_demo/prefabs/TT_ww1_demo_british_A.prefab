@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403460}
   - component: {fileID: 9514194}
+  - component: {fileID: 114425416900003888}
   m_Layer: 0
   m_Name: TT_ww1_demo_british_A
   m_TagString: Untagged
@@ -882,7 +883,7 @@ Animator:
   m_GameObject: {fileID: 132888}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 040d65e685ff26942ab4aa696c1b782b, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43be405b123e55543ad3df22200462ec, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -973,3 +974,18 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132888}
   m_IsPrefabParent: 1
+--- !u!114 &114425416900003888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bef46400712fc647982988c9a3f67c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 100
+  range: 60
+  turnSpeed: 15
+  target: {fileID: 0}

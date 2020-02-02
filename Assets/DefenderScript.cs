@@ -8,9 +8,12 @@ public class DefenderScript : MonoBehaviour
   public float range = 40f;
   public float turnSpeed = 15f;
   public GameObject target = null;
+
+  private Animator animator;
   // Use this for initialization
   void Start()
   {
+    animator = GetComponent<Animator>();
     InvokeRepeating("updateTarget", 0f, 0.5f);
     InvokeRepeating("attackTarget", 0f, 1f);
   }
@@ -44,22 +47,22 @@ public class DefenderScript : MonoBehaviour
     }
 
     if (nearestEnemy == null) {
-      target = null;
+      clearTarget();
     }
     else if (shortestDistance > range)
     {
-      target = null;
+      clearTarget();
     }
     else
     {
       if (target == null) {
-        target = nearestEnemy;
+        setTarget(nearestEnemy);
       }
       else
       {
         var distanceToTarget = Vector3.Distance(transform.position, target.transform.position);
         if (distanceToTarget > range)
-          target = nearestEnemy;
+          setTarget(nearestEnemy);
       }
     }
 
@@ -67,15 +70,35 @@ public class DefenderScript : MonoBehaviour
 
   public void attackTarget()
   {
-    if (target != null && !target.GetComponent<AttackerEngine>().isDead)
+    if (target == null)
     {
-      target.GetComponent<AttackerEngine>().TakeDamage(attack);
+      return;
     }
+    if(target.GetComponent<AttackerEngine>().isDead)
+    {
+      clearTarget();
+      return;
+    }
+
+    target.GetComponent<AttackerEngine>().TakeDamage(attack);
+
   }
 
   private void OnDrawGizmos()
   {
     Gizmos.color = Color.red;
     Gizmos.DrawWireSphere(transform.position, range);
+  }
+
+  private void setTarget(GameObject _target)
+  {
+    target = _target;
+    animator.SetBool("isAttacking", true);
+  }
+
+  private void clearTarget()
+  {
+    target = null;
+    animator.SetBool("isAttacking", false);
   }
 }
