@@ -7,7 +7,7 @@ public class AttackerEngine : MonoBehaviour
   public float health = startHealth;
   public bool isDead = false;
   public float attackDistance = 15;
-  private Transform goalAttackPoint;
+  public Transform goalAttackPoint;
   private Animator animator;
   private NavMeshAgent agent;
 
@@ -26,12 +26,12 @@ public class AttackerEngine : MonoBehaviour
 
       if (distance < minDistance)
       {
-        nearestAttackPoint = attackPoint;
+        nearestAttackPoint = attackPoint.transform;
         minDistance = distance;
       }
     }
 
-    return nearestAttackPoint.transform;
+    return nearestAttackPoint.GetChild(0);
   }
 
   // Use this for initialization
