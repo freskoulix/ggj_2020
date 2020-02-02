@@ -53,6 +53,7 @@ public class DefenderScript : MonoBehaviour
       return;
     }
 
+    animator.SetTrigger("attack");
 		GameObject effectInst = Instantiate(shotEffect, firePoint.position, firePoint.rotation);
 		Destroy(effectInst, 2f);
 
@@ -110,12 +111,12 @@ public class DefenderScript : MonoBehaviour
   private void setTarget(GameObject _target)
   {
     target = _target;
-    animator.SetBool("isAttacking", true);
+    // animator.SetBool("isAttacking", true);
   }
 
   private void clearTarget()
   {
     target = null;
-    animator.SetBool("isAttacking", false);
+    // animator.SetBool("isAttacking", false);
   }
 }
