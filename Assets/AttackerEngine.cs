@@ -44,18 +44,23 @@ public class AttackerEngine : MonoBehaviour
     agent.acceleration = Random.Range(2, 10);
     animator = GetComponent<Animator>();
     animator.SetBool("move_bool", true);
+    InvokeRepeating("tryAttacking", 0f, 1.5f);
   }
 
   // Update is called once per frame
   void Update()
   {
+    if(goalAttackPoint == null)
+      return;
+
     var dist = Vector3.Distance(goalAttackPoint.transform.position, transform.position);
     if (dist <= attackDistance)
     {
+      //This will probably conflict with the actual attacking mechanism
       animator.SetBool("move_bool", false);
-      animator.SetBool("attack_bool", true);
-      // agent.velocity = Vector3.zero;
-      // agent.Stop();
+      // animator.SetBool("attack_bool", true);
+      agent.velocity = Vector3.zero;
+      agent.Stop();
     }
     if (health <= 0 && !isDead)
     {
@@ -73,6 +78,28 @@ public class AttackerEngine : MonoBehaviour
   {
     health -= attack;
   }
+
+    void tryAttacking()
+    {
+        if(goalAttackPoint == null)
+            return;
+
+        float dist = Vector3.Distance(goalAttackPoint.transform.position, transform.position);
+
+        if (dist <= attackDistance)
+        {
+            animator.SetTrigger("attack_trigger");
+            Invoke("damageTarget", 0.6f);
+        }
+    }
+
+    void damageTarget()
+    {
+        if(goalAttackPoint == null)
+            return;
+
+      goalAttackPoint.GetComponent<Wall>().TakeDamage(100F);
+    }
 
   public void deleteMe()
   {
