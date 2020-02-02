@@ -53,7 +53,7 @@ public class WaveSpawner : MonoBehaviour
 
   void StartNextWave()
   {
-    Debug.Log("Starting new Wave");
+    // Debug.Log("Starting new Wave");
     nextWave++;
     state = SpawnState.COUNTING;
     waveCountdown = timeBetweenWaves;
