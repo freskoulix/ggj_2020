@@ -1,4 +1,4 @@
-# Tower Repair
+# Last Castle Standing
 ## Global Game Jam 2020 - Patras site
 
 ## Summary
