@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour {
 		var iLen = attackPoints.childCount;
 		if(iLen < 8)
 		{
+			PlayerPrefs.SetInt("Score", (int) currentWave);
 			SceneManager.LoadScene("Game Over Menu");
 		}
 	}

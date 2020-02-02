@@ -2276,7 +2276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWave: 0
-  timeBetweenWaves: 5
+  timeBetweenWaves: 30
   waveCountdown: 0
   enemy: {fileID: 4000013118905508, guid: 2b08b0266e6a17647be46ab1ce2b3d8b, type: 2}
   state: 1
