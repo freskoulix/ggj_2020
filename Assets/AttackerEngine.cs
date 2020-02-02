@@ -6,9 +6,10 @@ public class AttackerEngine : MonoBehaviour
   public static float startHealth = 100;
   public float health = startHealth;
   public bool isDead = false;
-  private float attackDistance = 35;
+  public float attackDistance = 15;
   private Transform goalAttackPoint;
   private Animator animator;
+  private NavMeshAgent agent;
 
   Transform GetNearestAttackPoint()
   {
@@ -38,7 +39,7 @@ public class AttackerEngine : MonoBehaviour
   {
     var goal = GetNearestAttackPoint();
     goalAttackPoint = goal;
-    NavMeshAgent agent = GetComponent<NavMeshAgent>();
+    agent = GetComponent<NavMeshAgent>();
     agent.destination = goal.position;
     agent.speed = Random.Range(15, 35);
     agent.acceleration = Random.Range(2, 10);
@@ -54,12 +55,16 @@ public class AttackerEngine : MonoBehaviour
     {
       animator.SetBool("move_bool", false);
       animator.SetBool("attack_bool", true);
+      // agent.velocity = Vector3.zero;
+      // agent.Stop();
     }
     if (health <= 0 && !isDead)
     {
       animator.SetBool("attack_bool", false);
       animator.SetBool("move_bool", false);
       animator.SetBool("death_bool", true);
+      agent.velocity = Vector3.zero;
+      agent.Stop();
       isDead = true;
       Invoke("deleteMe", 4f);
     }
