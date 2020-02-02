@@ -26,7 +26,8 @@ public class Wall : MonoBehaviour {
 	void Update () {
         healthBar.fillAmount = health / startHealth;
         if(health <= 0){
-            Destroy(this);
+            Destroy(gameObject);
+            //Also destroy tower/wall if it's a different entity
         }
     }
 }
