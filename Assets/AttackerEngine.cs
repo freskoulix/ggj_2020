@@ -31,7 +31,7 @@ public class AttackerEngine : MonoBehaviour
       }
     }
 
-    return nearestAttackPoint.GetChild(0);
+    return nearestAttackPoint;
   }
 
   // Use this for initialization
@@ -98,7 +98,7 @@ public class AttackerEngine : MonoBehaviour
         if(goalAttackPoint == null)
             return;
 
-      goalAttackPoint.GetComponent<Wall>().TakeDamage(100F);
+      goalAttackPoint.GetChild(0).GetComponent<Wall>().TakeDamage(100F);
     }
 
   public void deleteMe()
